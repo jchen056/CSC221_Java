@@ -216,8 +216,20 @@ public class sort {
 		System.out.println("For size "+n);
 		// Generate random integers in range 0 to 999
 		int array[]=new int[n];
+		int array1[]=new int[n];
+		int array2[]=new int[n];
+		int array3[]=new int[n];
+		int array4[]=new int[n];
+		int array5[]=new int[n];
 		for(int i=0;i<n;i++){
-			array[i]=rand.nextInt(1000);
+			int a=rand.nextInt(1000);
+			array[i]=a;
+			array1[i]=a;
+			array2[i]=a;
+			array3[i]=a;
+			array4[i]=a;
+			array5[i]=a;
+			
 		}
 		
 		//compile time for insertion sort
@@ -226,51 +238,41 @@ public class sort {
 		long end = System.nanoTime();
 		System.out.println("insertion sort "+(end-start)+" NanoSeconds");
 		
-		for(int i=0;i<n;i++){
-			array[i]=rand.nextInt(1000);
-			}
+	
 		//compile time for mergesort	  
 		start = System.nanoTime();
-		mergesort(array,0,n-1);
+		mergesort(array1,0,n-1);
 		end = System.nanoTime();
 		System.out.println("merge sort "+(end-start)+" NanoSeconds");
 		
 		
-		for(int i=0;i<n;i++){
-			array[i]=rand.nextInt(1000);
-			}
+	
 		
 		//compile time for heapsort
 		start = System.nanoTime();
-		heapsort(array);
+		heapsort(array2);
 		end = System.nanoTime();
 		System.out.println("heapsort "+(end-start)+" NanoSeconds");
-		
-		for(int i=0;i<n;i++){
-			array[i]=rand.nextInt(1000);
-			}
+	
 		//compile time for quicksort	  
 		start = System.nanoTime();
-		quicksort(array,0,n-1);
+		quicksort(array3,0,n-1);
 		end = System.nanoTime();
 		System.out.println("quicksort "+(end-start)+" NanoSeconds");
 		
-		for(int i=0;i<n;i++){
-			array[i]=rand.nextInt(1000);}
+		
 		
 		//compile time for quicksort random
-			start = System.nanoTime();
-			quicksortR(array,0,n-1);
-			end = System.nanoTime();
-			System.out.println("quicksort random "+(end-start)+" NanoSeconds");
+		start = System.nanoTime();
+		quicksortR(array4,0,n-1);
+		end = System.nanoTime();
+		System.out.println("quicksort random "+(end-start)+" NanoSeconds");
 			
-		for(int i=0;i<n;i++){
-			array[i]=rand.nextInt(1000);
-			}
+
 		
 		//compile time for radix sort
 		start = System.nanoTime();
-		quicksort(array,0,n-1);
+		quicksort(array5,0,n-1);
 		end = System.nanoTime();
 		System.out.println("radixsort "+(end-start)+" NanoSeconds\n");
 		}
